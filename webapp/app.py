@@ -17,6 +17,7 @@ from flask_socketio import SocketIO
 
 APP = Flask(__name__)
 APP.config.update(
+    WTF_CSRF_ENABLED=False,
     SECRET_KEY=os.environ['SECRET_KEY'],
     HEROKUAPP=os.environ['herokuApp'],
     ADMINUSER=os.environ['adminUser'],
